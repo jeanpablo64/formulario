@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 600px){
+   section {
+    width: 410px;
+   }
+
+   .linha1 > p > input {
+    width: 170px;
+   }
+
+   .linha2 > p > input {
+    width: 370px;
+   }
+
+  
+    form > legend {
+        padding-bottom: 20px;
+        padding-left: 15px;
+    }
+
+   .linha3 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+   }
+
+   .linha3 > p {
+    width: 180px;
+   }
+
+   .linha4 > p > input {
+    width: 370px;
+   }
+
+   form > input {
+    margin-top: 20px;
+    width: 380px;
+   }
+}
+
+@media screen and (max-width: 400px){
+    section {
+     width: 370px;
+    }
+ 
+    .linha1 > p > input {
+     width: 160px;
+    }
+ 
+    .linha2 > p > input {
+     width: 353px;
+    }
+ 
+   
+     form > legend {
+         padding-bottom: 20px;
+         padding-left: 15px;
+     }
+ 
+    .linha3 {
+     display: flex;
+     justify-content: center;
+     gap: 18px;
+    }
+
+    
+ 
+    .linha3 > p {
+     width: 170px;
+    }
+
+    
+ 
+    .linha4 > p > input {
+     width: 350px;
+    }
+ 
+    form > input {
+     margin-top: 20px;
+     width: 380px;
+    }
+
+    .linha5 {
+        padding-right: 20px;
+        justify-content: center;
+    }
+
+    .linha5 > p {
+        width: 300px;
+    }
+
+
+    form > input {
+        width: 365px;
+    }
+
+ }

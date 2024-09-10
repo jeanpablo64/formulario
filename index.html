@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+<section>
+  <h1>Contate-nos</h1>
+  <form action="cadastro.php" method="get">
+    <div class="linha1">
+      <p>
+        <label for="inome">Primeiro nome <span class="errorMessage">*</span></label>
+        <input type="text" name="Nome" id="inome" required>
+        <span class="error-message"></span>
+      </p>
+
+      <p>
+        <label for="isobrenome">sobrenome <span class="errorMessage">*</span></label>
+        <input type="text" name="sobrenome" id="isobrenome" required>
+      </p>
+    </div>
+
+    <div class="linha2">
+        <p>
+          <label for="iemail">Email <span class="errorMessage">*</span></label>
+          <input type="email" name="email" id="iemail" required>
+          <span class="error-message"></span>
+        </p>
+    </div>
+    
+    <legend>Tipo de Consulta <span class="errorMessage">*</span></legend>
+    <div class="linha3">
+      
+        <p>
+          <input type="radio" name="consulta" id="igeral" value="G">
+          <label for="igeral">Consulta Geral</label>
+        </p>
+  
+      
+        <p>
+          <input type="radio" name="consulta" id="isuporte" value="S">
+          <label for="isuporte">Solicitar Suporte</label>
+        </p>
+      
+    </div>
+
+    <div class="linha4">
+      <p>
+        <label for="imensagem">Mensagem <span class="errorMessage">*</span></label><br>
+        <input type="text" name="Mensagem" id="imensagem" autocomplete="off" required>
+      </p>
+    </div>
+
+    <div class="linha5">
+      <input type="checkbox" name="concordo" id="iconcordo" required>
+      <label for="iconcordo"><p>Eu concordo, em ser contatado pela equipe de atendimento </p><span class="erro">*</span></label>
+    </div>
+    <input type="submit">
+  </form>
+</section>
+
+<script>
+  const emailInput = document.getElementById('iemail');
+  const errorMessage = document.querySelector('.error-message');
+
+emailInput.addEventListener('input', () => {
+  if (emailInput.value === '') {
+    errorMessage.textContent = 'Por favor, preencha o campo de email.';
+    errorMessage.style.display = 'block';
+  } else {
+    errorMessage.style.display = 'none';
+  }
+});
+</script>
+</body>
+</html>
